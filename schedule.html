@@ -1,1 +1,96 @@
 /* schedule coming soon */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule – Tom Bertolino Music</title>
+  <meta name="description" content="Upcoming performances by Tom Bertolino." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a class="site-logo" href="index.html">
+      <img src="logo.jpg" alt="Tom Bertolino Music Logo" />
+      <span>
+        <span class="site-title">Tom Bertolino Music</span>
+        <span class="site-sub">Solo Acoustic Guitarist &amp; Vocalist</span>
+      </span>
+    </a>
+    <nav>
+      <a href="videos.html">Videos</a>
+      <a href="schedule.html" class="active">Schedule</a>
+      <a href="song-list.html">Song List</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h1>Schedule</h1>
+    <p>2026 Upcoming Performances</p>
+    <div class="page-divider"></div>
+  </div>
+
+  <main>
+    <div class="schedule-list">
+
+      <div class="schedule-item">
+        <div class="schedule-date">Sat, Feb 7</div>
+        <div>
+          <div class="schedule-venue">Father McGivney's Griffin Gala</div>
+          <div class="schedule-location">Glen Carbon, IL</div>
+        </div>
+        <div class="schedule-time">8:30 – 10:30 pm</div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-date">Wed, Feb 11</div>
+        <div>
+          <div class="schedule-venue">Trace Annual Valentine's Day Party</div>
+          <div class="schedule-location">Private Event</div>
+        </div>
+        <div class="schedule-time">5:30 – 7:00 pm</div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-date">Thu, May 21</div>
+        <div>
+          <div class="schedule-venue">Trace Memorial Day Party</div>
+          <div class="schedule-location">Private Event</div>
+        </div>
+        <div class="schedule-time">5:30 – 7:00 pm</div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-date">Sat, May 23</div>
+        <div>
+          <div class="schedule-venue">Bonifest – St. Boniface Catholic Church</div>
+          <div class="schedule-location">Edwardsville, IL</div>
+        </div>
+        <div class="schedule-time">2:30 – 4:30 pm</div>
+      </div>
+
+      <div class="schedule-item">
+        <div class="schedule-date">Sun, Jul 26</div>
+        <div>
+          <div class="schedule-venue">1818 Chophouse</div>
+          <div class="schedule-location">Edwardsville, IL</div>
+        </div>
+        <div class="schedule-time">11:00 am – 2:00 pm</div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:2.5rem; text-align:center; font-size:0.85rem; color:var(--muted);">
+      Interested in booking Tom for your event? <a href="contact.html">Get in touch &rarr;</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="yr"></span> Tom Bertolino Music &nbsp;|&nbsp; <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

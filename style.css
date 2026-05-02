@@ -1,1 +1,468 @@
 /* styles coming soon */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --bg:        #0f0d0b;
+  --surface:   #1a1612;
+  --card:      #221e19;
+  --border:    #3a3028;
+  --gold:      #c9a84c;
+  --gold-dim:  #8a6f2e;
+  --cream:     #f0e6d0;
+  --muted:     #9e9082;
+  --white:     #ffffff;
+  --font-head: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', Helvetica, sans-serif;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--cream); }
+
+img { max-width: 100%; display: block; }
+
+/* ── Header / Nav ── */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 0;
+  text-decoration: none;
+}
+
+.site-logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.site-title {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.site-sub {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.85rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+
+/* ── Hero (index only) ── */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  background: radial-gradient(ellipse at 50% 0%, #2a1f0a 0%, var(--bg) 70%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  border: 2px solid var(--gold-dim);
+  margin: 0 auto 2rem;
+  box-shadow: 0 0 60px rgba(201,168,76,0.15);
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gold-dim);
+  margin: 0 auto 2.5rem;
+}
+
+.hero-tagline {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--cream);
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.85;
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.6rem;
+  border: 1px solid var(--gold-dim);
+  border-radius: 4px;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
+
+/* ── Page Header (inner pages) ── */
+.page-header {
+  padding: 3.5rem 2rem 2.5rem;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, #2a1f0a 0%, var(--bg) 70%);
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header h1 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--gold);
+  letter-spacing: 0.06em;
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.page-divider {
+  width: 50px;
+  height: 2px;
+  background: var(--gold-dim);
+  margin: 1.2rem auto 0;
+}
+
+/* ── Main Content ── */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+/* ── Videos Grid ── */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.video-card:hover {
+  border-color: var(--gold-dim);
+  transform: translateY(-3px);
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.video-title {
+  padding: 0.85rem 1rem;
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  color: var(--cream);
+  border-top: 1px solid var(--border);
+}
+
+/* ── Schedule ── */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.schedule-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem 1.5rem;
+  align-items: center;
+}
+
+.schedule-date {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.schedule-venue {
+  font-size: 0.95rem;
+  color: var(--cream);
+  font-weight: 400;
+}
+
+.schedule-location {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.schedule-time {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.no-shows {
+  font-family: var(--font-head);
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* ── Song List ── */
+.song-intro {
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.era-section {
+  margin-bottom: 2.5rem;
+}
+
+.era-title {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  color: var(--gold);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.song-columns {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .song-columns { columns: 1; }
+}
+
+.song-item {
+  font-size: 0.88rem;
+  color: var(--cream);
+  padding: 0.2rem 0;
+  break-inside: avoid;
+}
+
+.song-item .artist {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* ── Contact ── */
+.contact-wrap {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contact-intro {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.7rem 0.9rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--gold-dim);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.btn-submit {
+  align-self: flex-start;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.btn-submit:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.form-success {
+  display: none;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid var(--gold-dim);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  color: var(--gold);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 1.75rem 2rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+footer a { color: var(--muted); }
+footer a:hover { color: var(--gold); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .schedule-time { text-align: left; }
+  header { padding: 0 1rem; }
+  main { padding: 2rem 1rem 4rem; }
+}

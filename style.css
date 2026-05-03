@@ -185,6 +185,77 @@ nav a.active {
   border-color: var(--gold);
 }
 
+/* ── Hero Photo Strip (index only) ── */
+.hero-photo {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  filter: brightness(0.72);
+}
+
+.hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15,13,11,0.25) 0%,
+    rgba(15,13,11,0.05) 40%,
+    rgba(15,13,11,0.55) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 2.5rem 3rem;
+}
+
+.hero-photo-caption {
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.75);
+}
+
+/* ── Page Photo Banner (inner pages) ── */
+.photo-banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.photo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  filter: brightness(0.55) saturate(0.85);
+}
+
+.photo-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15,13,11,0.3) 0%,
+    rgba(15,13,11,0.0) 50%,
+    rgba(15,13,11,0.5) 100%
+  );
+  pointer-events: none;
+}
+
 /* ── Page Header (inner pages) ── */
 .page-header {
   padding: 3.5rem 2rem 2.5rem;
@@ -465,4 +536,7 @@ footer a:hover { color: var(--gold); }
   .schedule-time { text-align: left; }
   header { padding: 0 1rem; }
   main { padding: 2rem 1rem 4rem; }
+  .hero-photo { height: 260px; }
+  .hero-photo-overlay { padding: 1.5rem; }
+  .photo-banner { height: 130px; }
 }

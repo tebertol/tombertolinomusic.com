@@ -32,15 +32,15 @@
     <div class="page-divider"></div>
   </div>
 
+  <!-- Vintage mic banner -->
+  <div class="photo-banner">
+    <img src="tom_bertolino_shure_mic_image.jpg" alt="Vintage microphone" />
+  </div>
+
   <main>
     <div class="contact-wrap">
       <p class="contact-intro">Interested in booking Tom for your next event? Fill out the form below and he'll get back to you shortly.</p>
 
-      <!--
-        IMPORTANT: Replace the action URL below with your actual Formspree endpoint.
-        After creating your form at formspree.io, it will look like:
-        https://formspree.io/f/xxxxxxxx
-      -->
       <form
         class="contact-form"
         action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
@@ -88,7 +88,6 @@
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // Show success message after Formspree redirect (if using AJAX feel)
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', async function(e) {
       e.preventDefault();

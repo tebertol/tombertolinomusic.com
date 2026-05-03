@@ -240,7 +240,7 @@ nav a.active {
   object-fit: cover;
   object-position: center center;
   display: block;
-  filter: brightness(0.55) saturate(0.85);
+<!-- filter: brightness(0.55) saturate(0.85); -->
 }
 
 .photo-banner::after {

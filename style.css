@@ -115,8 +115,9 @@ nav a.active {
 }
 
 .hero-logo {
-  width: 140px;
-  height: 140px;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
   border-radius: 12px;
   border: 2px solid var(--gold-dim);
   margin: 0 auto 2rem;

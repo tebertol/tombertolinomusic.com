@@ -441,9 +441,28 @@ main {
 
 .contact-intro {
   text-align: center;
-  color: var(--muted);
-  margin-bottom: 2.5rem;
+  color: var(--cream);
+  margin-bottom: 1rem;
   font-size: 0.95rem;
+}
+
+.contact-booking {
+  text-align: center;
+  color: var(--cream);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.contact-booking strong {
+  font-weight: 700;
+}
+
+.contact-other {
+  text-align: center;
+  color: var(--cream);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;   /* gap between this text and the form */
 }
 
 .contact-form {
